@@ -1,1 +1,1 @@
-bundle exec jekyll liveserve
+bundle exec ruby -r ./pathutil_monkey_patch.rb -S jekyll serve --port 4001 --livereload
