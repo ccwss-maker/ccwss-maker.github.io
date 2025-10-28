@@ -1,51 +1,66 @@
 <div class='paper-box'>
   <div class='paper-box-image'>
     <div>
-      <div class="badge">ICRA 2025</div>
-      <img src='images/lunarplan_icra2026/motivation.svg' alt="sym" width="100%" style="border-radius:8px; margin-bottom: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-      <video src='images/lunarplan_icra2026/simulation.mp4' width="100%" playsinline autoplay loop muted style="border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1);"></video>
+      <div class="badge">Under Review</div>
+      <img src='images/lunarplan_icra2026/motivation.jpg' alt="sym" width="100%" style="border-radius:8px; margin-bottom: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+      <!-- <video src='images/lunarplan_icra2026/simulation.mp4' width="100%" playsinline autoplay loop muted style="border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1);"></video> -->
     </div>
   </div>
 
   <div class='paper-box-text'>
     <h3 style="margin:0 0 6px 0; font-size:1.3rem; font-weight:700; color:#222;">
-      Swept volume-aware trajectory planning and mpc tracking for multi-axle swerve-drive amrs
+      Energy-Constrained Navigation for Planetary Rovers under Hybrid RTG-Solar Power
     </h3>
 
     <p style="margin:4px 0 10px 0; font-size:0.9rem; color:#666; font-style:italic;">
-      Accepted by <a href="https://2025.ieee-icra.org/"
-        target="_blank" style="color:#666; text-decoration:underline;">
-        <strong>IEEE International Conference on Robotics and Automation (ICRA)</strong>
-      </a>, May 2025
+      Under review for an international robotics conference
     </p>
 
+
     <p style="margin:0 0 12px 0; font-size:0.95rem; color:#444;">
-      <strong>Tianxin Hu</strong>, Shenghai Yuan, Ruofei Bai, Xinhang Xu, Yuwen Liao, Fen Liu, Lihua Xie
+      <strong>Tianxin Hu</strong>, Weixiang Guo, Ruimeng Liu, Xinhang Xu, Rui Qian, Jinyu Chen, Shenghai Yuan, Lihua Xie
     </p>
 
     <div style="background:#f3f4f6; border-left:3px solid #2b6cb0;
                 padding:12px 14px; border-radius:6px; margin:0.5em 0 1.2em 0;">
       <i class="fas fa-lightbulb" style="color:#2b6cb0; margin-right:8px;"></i>
       <span style="font-size:0.96rem; line-height:1.6; color:#333;">
-        We propose a swept volume-aware trajectory planning and MPC tracking framework for multi-axle AMRs,
-        enabling real-time path optimization that minimizes swept volume and enhances maneuverability
-        in confined environments.
+        We present an energy-constrained trajectory planning framework for planetary rovers that explicitly models hybrid RTG–solar power flow. The method ensures smooth and dynamically feasible trajectories while strictly satisfying instantaneous power and cumulative energy limits.
       </span>
     </div>
 
     <div style="margin-top:1em; text-align:center;">
-      <a href="https://arxiv.org/pdf/2412.16875"
+      <a href="https://arxiv.org/pdf/2509.15062"
         style="margin:0 1em; text-decoration:underline;">
         <i class="ai ai-arxiv ai-fw"></i> arXiv
       </a>
-      <a href="https://github.com/ccwss-maker/svplan"
+      <a href="https://github.com/ccwss-maker/lunar_planner"
         style="margin:0 1em; text-decoration:underline;">
         <i class="fab fa-fw fa-github"></i> GitHub
       </a>
-      <a href="https://www.youtube.com/watch?v=LU1L7FAnooU"
+      <!-- <a href="https://www.youtube.com/watch?v=LU1L7FAnooU"
         style="margin:0 1em; text-decoration:underline;">
         <i class="fab fa-fw fa-youtube"></i> YouTube
+      </a> -->
+      <a onclick="document.getElementById('videoModal').style.display='block'"
+        style="margin:0 1em; text-decoration:underline; cursor:pointer;">
+        <i class="fab fa-fw fa-youtube"></i> Video
       </a>
+
+      <!-- 弹出视频层 -->
+      <div id="videoModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:9999; text-align:center;">
+        <video id="modalVideo"
+              src="images/lunarplan_icra2026/explanation.mp4"
+              controls autoplay loop muted playsinline
+              style="max-width:80%; max-height:80%; margin-top:5%;">
+        </video>
+        <div style="color:white; margin-top:10px; cursor:pointer;"
+            onclick="document.getElementById('modalVideo').pause(); document.getElementById('videoModal').style.display='none';">
+            ✖ Close
+        </div>
+      </div>
+
+
     </div>
   </div>
 </div>
