@@ -28,9 +28,9 @@ My research interest includes neural machine translation and computer vision. I 
 
 # 📝 Publications 
 {% include publications/lunarplan_icra2026/index.html %}
+{% include publications/starc_icra2026/index.html %}
 {% include publications/msagv_jai2025/index.html %}
 {% include publications/svplan_icra2025/index.html %}
-- [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020**
 
 # 🎖 Honors and Awards
 - *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
