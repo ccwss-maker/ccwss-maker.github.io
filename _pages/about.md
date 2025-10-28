@@ -27,23 +27,9 @@ My research interest includes neural machine translation and computer vision. I 
 - *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
 
 # 📝 Publications 
-
-<div class='paper-box'><div class='paper-box-image'><div>
-<div class="badge">ICRA 2025</div>
-<img src='images/svplan.svg' alt="sym" width="100%" style="margin-bottom: 10px;">
-<img src='images/1.gif' alt="sym" width="100%">
-</div></div>
-<div class='paper-box-text' markdown="1">
-
-[Swept volume-aware trajectory planning and mpc tracking for multi-axle swerve-drive amrs](https://arxiv.org/pdf/2412.16875)
-
-**Tianxin Hu**, Shenghai Yuan, Ruofei Bai, Xinhang Xu, Yuwen Liao, Fen Liu, Lihua Xie
-
-[**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-</div>
-</div>
-
+{% include publications/svplan_icra2025/index.html %}
+{% include publications/msagv_jai2025/index.html %}
+{% include publications/svplan_icra2025/index.html %}
 - [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020**
 
 # 🎖 Honors and Awards
