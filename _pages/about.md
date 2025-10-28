@@ -36,8 +36,52 @@ My research interest includes neural machine translation and computer vision. I 
 {% include publications/svplan_icra2025/index.html %}
 
 # 🎖 Honors and Awards
-- *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+<div style="margin-top:10px; line-height:1.5;">
+
+  <p style="margin-bottom:10px;">
+    <strong>[A1]</strong> <span style="font-weight:600;">(International Level)</span> 
+    <strong>Bronze Award of the 9th China College Students “Internet+” Innovation and Entrepreneurship Competition</strong>
+    <span style="float:right; font-weight:500;">Aug 2023</span><br>
+    <em style="color:#666;">Hubei District Organizing Committee of China College Students “Internet+” Competition</em>
+  </p>
+
+  <p style="margin-bottom:10px;">
+    <strong>[A2]</strong> <span style="font-weight:600;">(National Level)</span> 
+    <strong>The First Prize of the 18th “Challenge Cup” National Undergraduate Curricular Academic Science and Technology Works</strong>
+    <span style="float:right; font-weight:500;">Oct 2023</span><br>
+    <em style="color:#666;">China Association for Science and Technology, Ministry of Education of the PRC, Chinese Academy of Social Sciences</em>
+  </p>
+
+  <p style="margin-bottom:10px;">
+    <strong>[A3]</strong> <span style="font-weight:600;">(International Level)</span> 
+    <strong>Bronze Award of the 8th China College Students “Internet+” Innovation and Entrepreneurship Competition</strong>
+    <span style="float:right; font-weight:500;">Apr 2023</span><br>
+    <em style="color:#666;">Organizing Committee of China College Students “Internet+” Competition</em>
+  </p>
+
+  <p style="margin-bottom:10px;">
+    <strong>[A4]</strong> <span style="font-weight:600;">(National Level)</span> 
+    <strong>Second Prize of the 15th China College Student Computer Design Competition</strong>
+    <span style="float:right; font-weight:500;">Jul 2022</span><br>
+    <em style="color:#666;">Organizing Committee of Chinese College Student Computer Design Competition</em>
+  </p>
+
+  <p style="margin-bottom:10px;">
+    <strong>[A5]</strong> <span style="font-weight:600;">(National Level)</span> 
+    <strong>Second Prize of the 15th Energy Saving and Emission Reduction Competition</strong>
+    <span style="float:right; font-weight:500;">Aug 2022</span><br>
+    <em style="color:#666;">China College Student Energy Conservation and Emission Reduction Social Practice and Technology Competition Committee</em>
+  </p>
+
+  <p style="margin-bottom:10px;">
+    <strong>[A6]</strong> <span style="font-weight:600;">(National Level)</span> 
+    <strong>Third Prize and Best Rookie Award of Formula Student Competition</strong>
+    <span style="float:right; font-weight:500;">Oct 2022</span><br>
+    <em style="color:#666;">China Society of Automotive Engineers, Organizing Committee of FSAC</em>
+  </p>
+
+</div>
+
 
 # 📖 Educations
 - *2019.06 - 2022.04 (now)*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
