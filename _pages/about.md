@@ -40,9 +40,9 @@ My research interest includes neural machine translation and computer vision. I 
 
   <p style="margin-bottom:10px;">
     <strong>[A1]</strong> <span style="font-weight:600;">(International Level)</span> 
-    <strong>Bronze Award of the 9th China College Students “Internet+” Innovation and Entrepreneurship Competition</strong>
-    <span style="float:right; font-weight:500;">Aug 2023</span><br>
-    <em style="color:#666;">Hubei District Organizing Committee of China College Students “Internet+” Competition</em>
+    <strong>Bronze Award of the 9th China International College Students Innovation Competition</strong>
+    <span style="float:right; font-weight:500;">Apr 2024</span><br>
+    <em style="color:#666;">Organizing Committee of China College Students “Internet+” Competition</em>
   </p>
 
   <p style="margin-bottom:10px;">
@@ -86,6 +86,7 @@ My research interest includes neural machine translation and computer vision. I 
 {% include projects/Aibot/index.html %}
 {% include projects/XINCHI/index.html %}
 {% include projects/CHIJI/index.html %}
+{% include projects/Toy/index.html %}
 
 # 📖 Educations
 - *2019.06 - 2022.04 (now)*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
