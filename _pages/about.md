@@ -84,6 +84,7 @@ My research interest includes neural machine translation and computer vision. I 
 
 # 💬 Invited Talks
 {% include projects/Aibot/index.html %}
+{% include projects/XINCHI/index.html %}
 {% include projects/CHIJI/index.html %}
 
 # 📖 Educations
