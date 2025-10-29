@@ -22,9 +22,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet 
 My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
 
 
-# 🔥 News
+<!-- # 🔥 News
 - *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
 
 # 📝 Publications 
 ## 🔬 Under Review
@@ -35,63 +35,20 @@ My research interest includes neural machine translation and computer vision. I 
 {% include publications/msagv_jai2025/index.html %}
 {% include publications/svplan_icra2025/index.html %}
 
-# 🎖 Honors and Awards
-<div style="margin-top:10px; line-height:1.5;">
+# 📜 Patents
+{% include patents/index.html %}
 
-  <p style="margin-bottom:10px;">
-    <strong>[A1]</strong> <span style="font-weight:600;">(International Level)</span> 
-    <strong>Bronze Award of the 9th China International College Students Innovation Competition</strong>
-    <span style="float:right; font-weight:500;">Apr 2024</span><br>
-    <em style="color:#666;">Organizing Committee of China College Students “Internet+” Competition</em>
-  </p>
-
-  <p style="margin-bottom:10px;">
-    <strong>[A2]</strong> <span style="font-weight:600;">(National Level)</span> 
-    <strong>The First Prize of the 18th “Challenge Cup” National Undergraduate Curricular Academic Science and Technology Works</strong>
-    <span style="float:right; font-weight:500;">Oct 2023</span><br>
-    <em style="color:#666;">China Association for Science and Technology, Ministry of Education of the PRC, Chinese Academy of Social Sciences</em>
-  </p>
-
-  <p style="margin-bottom:10px;">
-    <strong>[A3]</strong> <span style="font-weight:600;">(International Level)</span> 
-    <strong>Bronze Award of the 8th China College Students “Internet+” Innovation and Entrepreneurship Competition</strong>
-    <span style="float:right; font-weight:500;">Apr 2023</span><br>
-    <em style="color:#666;">Organizing Committee of China College Students “Internet+” Competition</em>
-  </p>
-
-  <p style="margin-bottom:10px;">
-    <strong>[A4]</strong> <span style="font-weight:600;">(National Level)</span> 
-    <strong>Second Prize of the 15th China College Student Computer Design Competition</strong>
-    <span style="float:right; font-weight:500;">Jul 2022</span><br>
-    <em style="color:#666;">Organizing Committee of Chinese College Student Computer Design Competition</em>
-  </p>
-
-  <p style="margin-bottom:10px;">
-    <strong>[A5]</strong> <span style="font-weight:600;">(National Level)</span> 
-    <strong>Second Prize of the 15th Energy Saving and Emission Reduction Competition</strong>
-    <span style="float:right; font-weight:500;">Aug 2022</span><br>
-    <em style="color:#666;">China College Student Energy Conservation and Emission Reduction Social Practice and Technology Competition Committee</em>
-  </p>
-
-  <p style="margin-bottom:10px;">
-    <strong>[A6]</strong> <span style="font-weight:600;">(National Level)</span> 
-    <strong>Third Prize and Best Rookie Award of Formula Student Competition</strong>
-    <span style="float:right; font-weight:500;">Oct 2022</span><br>
-    <em style="color:#666;">China Society of Automotive Engineers, Organizing Committee of FSAC</em>
-  </p>
-
-</div>
-
-# 💬 Invited Talks
+# 🚀 Projects
 {% include projects/Aibot/index.html %}
 {% include projects/XINCHI/index.html %}
 {% include projects/CHIJI/index.html %}
+
+# 🎨 Toy Projects
 {% include projects/Toy/index.html %}
+
+# 🎖 Honors and Awards
+{% include awards/index.html %}
 
 # 📖 Educations
 - *2019.06 - 2022.04 (now)*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
 - *2015.09 - 2019.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-
-
-# 💻 Internships
-- *2019.05 - 2020.02*, [Lorem](https://github.com/), China.
