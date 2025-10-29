@@ -26,3 +26,6 @@ main:
 
   - title: "CV"
     url: "/cv.pdf"
+
+  # - title: "Maps"
+  #   url: "/#-visitor-map"
