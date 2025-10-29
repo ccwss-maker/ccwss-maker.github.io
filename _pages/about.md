@@ -39,11 +39,11 @@ My research interest includes neural machine translation and computer vision. I 
 {% include patents/index.html %}
 
 # 🚀 Projects
+## 💼 Professional Projects
 {% include projects/Aibot/index.html %}
 {% include projects/XINCHI/index.html %}
 {% include projects/CHIJI/index.html %}
-
-# 🎨 Toy Projects
+## 🎨 Toy Projects
 {% include projects/Toy/index.html %}
 
 # 🎖 Honors and Awards
