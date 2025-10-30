@@ -8,19 +8,22 @@ redirect_from:
   - /about.html
 ---
 
-{% if site.google_scholar_stats_use_cdn %}
+<!-- {% if site.google_scholar_stats_use_cdn %}
 {% assign gsDataBaseUrl = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: "@" %}
 {% else %}
 {% assign gsDataBaseUrl = "https://raw.githubusercontent.com/" | append: site.repository | append: "/" %}
 {% endif %}
-{% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
+{% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %} -->
 
 <span class='anchor' id='about-me'></span>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. Suspendisse condimentum, libero vel tempus mattis, risus risus vulputate libero, elementum fermentum mi neque vel nisl. Maecenas facilisis maximus dignissim. Curabitur mattis vulputate dui, tincidunt varius libero luctus eu. Mauris mauris nulla, scelerisque eget massa id, tincidunt congue felis. Sed convallis tempor ipsum rhoncus viverra. Pellentesque nulla orci, accumsan volutpat fringilla vitae, maximus sit amet tortor. Aliquam ultricies odio ut volutpat scelerisque. Donec nisl nisl, porttitor vitae pharetra quis, fringilla sed mi. Fusce pretium dolor ut aliquam consequat. Cras volutpat, tellus accumsan mattis molestie, nisl lacus tempus massa, nec malesuada tortor leo vel quam. Aliquam vel ex consectetur, vehicula leo nec, efficitur eros. Donec convallis non urna quis feugiat.
+I am **Tianxin Hu**, currently pursuing my M.Sc. in *Computer Control and Automation* at **Nanyang Technological University (NTU), Singapore**, supervised by **Prof. Lihua Xie** and **Dr. Shenghai Yuan**.
 
-My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
+My research focuses on **optimization-based planning and control** for autonomous systems, and I am currently exploring **learning-driven and memory-based navigation** inspired by human cognitive mechanisms.
 
+My technical expertise includes **ROS/ROS2**, **C++/Python**, **embedded systems**, and **simulation environments such as Gazebo and RViz**.
+
+I believe the future of navigation lies in memory and reasoning in latent space—like humans do—rather than relying on precise coordinates.
 
 <!-- # 🔥 News
 - *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
@@ -49,9 +52,15 @@ My research interest includes neural machine translation and computer vision. I 
 # 🎖 Honors and Awards
 {% include awards/index.html %}
 
-# 📖 Educations
-- *2019.06 - 2022.04 (now)*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2015.09 - 2019.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+# 📖 Education
+- *Aug 2024 – Present*, **Nanyang Technological University**, Singapore  
+  *M.Sc. in Computer Control and Automation, School of Electrical and Electronic Engineering*  
+  Dissertation: *Minimizing Swept Area for AGVs in Singapore Seaport*  
+  GPA: 92/100  
+
+- *Sep 2020 – Jun 2024*, **Wuhan University of Science and Technology**, China  
+  *B.Eng. in Vehicle Engineering (Industrial Planning), School of Automobile and Traffic Engineering*  
+  GPA: 88.3/100 <!-- (Class Rank: 3/32, Department Rank: 8/157) -->
 
 # 🗺️ Visitor Map
 <details style="margin:20px 0;">
