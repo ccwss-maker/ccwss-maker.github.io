@@ -20,7 +20,7 @@ redirect_from:
 I am Tianxin Hu, recently graduated with an **M.Sc. in Computer Control and Automation** from **Nanyang Technological University (NTU), Singapore**, under the supervision of **[Prof. Lihua Xie](https://scholar.google.com/citations?user=Fmrv3J8AAAAJ&hl=en)** and Dr. Yuan Shenghai. 
 My background is in **optimization-based planning and control** for autonomous systems, with practical experience in ROS/ROS2, C++/Python, and simulation-driven validation. 
 
-I am currently transitioning toward **reinforcement learning for robot locomotion**, with ongoing quadruped locomotion, and humanoid control.
+I am currently transitioning toward **reinforcement learning for robot locomotion**, with ongoing work spanning quadruped locomotion and humanoid control.
 More broadly, I am interested in integrating **structured dynamical priors** into **learning-based control** to achieve **robust, interpretable, and natural robot locomotion**.
 
 <span class='anchor' id='current-position'></span>
@@ -29,6 +29,11 @@ More broadly, I am interested in integrating **structured dynamical priors** int
 - *Mar 2026 – Present*, **Nanyang Technological University (NTU), Singapore**  
   *Research Assistant, Prof. Lihua Xie’s Group*  
   Working on a humanoid robotics project with Chery Robotics, focusing on reinforcement learning for humanoid locomotion in embodied task execution scenarios.
+
+<span class='anchor' id='ongoing-rl-locomotion'></span>
+
+<!-- # 🤖 Ongoing Research
+{% include ongoing_work/rl_locomotion/index.html %} -->
 
 # 📖 Education
 - *Aug 2024 – Present*, **Nanyang Technological University**, Singapore  
