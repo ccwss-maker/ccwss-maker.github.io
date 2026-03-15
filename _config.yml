@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "TIANXIN HU"
-description              : "Familiar with optimization-based planning and control; currently learning locomotion and reinforcement learning."
+description              : "Optimization-based control background; currently exploring RL for legged locomotion."
 repository               : 
 google_scholar_stats_use_cdn : true
 

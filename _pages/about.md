@@ -17,13 +17,27 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am **Tianxin Hu**, currently pursuing my M.Sc. in *Computer Control and Automation* at **Nanyang Technological University (NTU), Singapore**, supervised by **Prof. Lihua Xie** and **Dr. Shenghai Yuan**.
+I am Tianxin Hu, recently graduated with an **M.Sc. in Computer Control and Automation** from **Nanyang Technological University (NTU), Singapore**, under the supervision of **[Prof. Lihua Xie](https://scholar.google.com/citations?user=Fmrv3J8AAAAJ&hl=en)** and Dr. Yuan Shenghai. 
+My background is in **optimization-based planning and control** for autonomous systems, with practical experience in ROS/ROS2, C++/Python, and simulation-driven validation. 
 
-My research focuses on **optimization-based planning and control** for autonomous systems, and I am currently exploring **learning-driven and memory-based navigation** inspired by human cognitive mechanisms.
+I am currently transitioning toward **reinforcement learning for robot locomotion**, with ongoing quadruped locomotion, and humanoid control.
+More broadly, I am interested in integrating **structured dynamical priors** into **learning-based control** to achieve **robust, interpretable, and natural robot locomotion**.
 
-My technical expertise includes **ROS/ROS2**, **C++/Python**, **embedded systems**, and **simulation environments such as Gazebo and RViz**.
+# 💼 Current Position
+- *Mar 2026 – Present*, **Nanyang Technological University (NTU), Singapore**  
+  *Research Assistant, Prof. Lihua Xie’s Group*  
+  Working on a humanoid robotics project with Chery Robotics, focusing on reinforcement learning for humanoid locomotion in embodied task execution scenarios.
 
-I believe the future of navigation lies in memory and reasoning in latent space—like humans do—rather than relying on precise coordinates.
+# 📖 Education
+- *Aug 2024 – Present*, **Nanyang Technological University**, Singapore  
+  *M.Sc. in Computer Control and Automation, School of Electrical and Electronic Engineering*  
+  Dissertation: *Minimizing Swept Area for AGVs in Singapore Seaport*  
+  GPA: 95/100  
+
+- *Sep 2020 – Jun 2024*, **Wuhan University of Science and Technology**, China  
+  *B.Eng. in Vehicle Engineering (Industrial Planning), School of Automobile and Traffic Engineering*  
+  GPA: 88.3/100 <!-- (Class Rank: 3/32, Department Rank: 8/157) -->
+
 
 <!-- # 🔥 News
 - *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
@@ -50,16 +64,6 @@ I believe the future of navigation lies in memory and reasoning in latent space�
 
 # 🎖 Honors and Awards
 {% include awards/index.html %}
-
-# 📖 Education
-- *Aug 2024 – Present*, **Nanyang Technological University**, Singapore  
-  *M.Sc. in Computer Control and Automation, School of Electrical and Electronic Engineering*  
-  Dissertation: *Minimizing Swept Area for AGVs in Singapore Seaport*  
-  GPA: 95/100  
-
-- *Sep 2020 – Jun 2024*, **Wuhan University of Science and Technology**, China  
-  *B.Eng. in Vehicle Engineering (Industrial Planning), School of Automobile and Traffic Engineering*  
-  GPA: 88.3/100 <!-- (Class Rank: 3/32, Department Rank: 8/157) -->
 
 # 🗺️ Visitor Map
 <details style="margin:20px 0;">
