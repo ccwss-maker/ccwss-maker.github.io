@@ -23,6 +23,8 @@ My background is in **optimization-based planning and control** for autonomous s
 I am currently transitioning toward **reinforcement learning for robot locomotion**, with ongoing quadruped locomotion, and humanoid control.
 More broadly, I am interested in integrating **structured dynamical priors** into **learning-based control** to achieve **robust, interpretable, and natural robot locomotion**.
 
+<span class='anchor' id='current-position'></span>
+
 # 💼 Current Position
 - *Mar 2026 – Present*, **Nanyang Technological University (NTU), Singapore**  
   *Research Assistant, Prof. Lihua Xie’s Group*  
