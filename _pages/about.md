@@ -30,13 +30,12 @@ I believe the future of navigation lies in memory and reasoning in latent space�
 - *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
 
 # 📝 Publications 
-## 🔬 Under Review
-{% include publications/lunarplan_icra2026/index.html %}
-{% include publications/starc_icra2026/index.html %}
-{% include publications/CleanUpBench_aaai2025/index.html %}
 ## ✅ Accepted & Published
-{% include publications/msagv_jai2025/index.html %}
 {% include publications/svplan_icra2025/index.html %}
+{% include publications/msagv_jai2025/index.html %}
+{% include publications/tgsformer_cvpr2026/index.html %}
+
+<!-- ## 🔬 Under Review -->
 
 # 📜 Patents
 {% include patents/index.html %}
@@ -56,7 +55,7 @@ I believe the future of navigation lies in memory and reasoning in latent space�
 - *Aug 2024 – Present*, **Nanyang Technological University**, Singapore  
   *M.Sc. in Computer Control and Automation, School of Electrical and Electronic Engineering*  
   Dissertation: *Minimizing Swept Area for AGVs in Singapore Seaport*  
-  GPA: 92/100  
+  GPA: 95/100  
 
 - *Sep 2020 – Jun 2024*, **Wuhan University of Science and Technology**, China  
   *B.Eng. in Vehicle Engineering (Industrial Planning), School of Automobile and Traffic Engineering*  
