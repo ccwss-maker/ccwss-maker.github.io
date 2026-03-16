@@ -2,13 +2,11 @@
 
   <!-- Description -->
   <p style="margin:0 0 18px 0; font-size:0.92rem; color:#555; line-height:1.7;">
-    After briefly exploring the CPG direction, I set aside the interpretability question for now
-    and returned to the original problem: the learned gait still looks unnatural, nothing like real animal locomotion.
-    This led me to discover the <strong>Adversarial Motion Priors (AMP)</strong> approach
+    Alongside my exploration of CPG-based locomotion, I also became interested in a complementary question: how to make learned motion not only effective, but also more natural in style.
+    This led me to study <strong>Adversarial Motion Priors (AMP)</strong>
     [<a href="#amp-paper-1" style="text-decoration:none;">1</a>,
      <a href="#amp-paper-2" style="text-decoration:none;">2</a>],
-    which uses reference motion clips captured from real animals or humans as a discriminator signal,
-    guiding the policy to produce <strong>stylistically natural gaits</strong> without hand-crafting complex reward functions.
+    which uses reference motion clips as an adversarial signal to encourage the policy to match the style of natural motion without manually designing complex style rewards.
   </p>
 
   <!-- Videos -->
@@ -18,7 +16,7 @@
            width="100%"
            style="border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.12);">
       <p style="margin:8px 0 0 0; font-size:0.88rem; font-weight:600; color:#333;">
-        Reference motion clip (motion capture)
+        Reference motion clip
       </p>
     </div>
     <div style="text-align:center;">
@@ -26,14 +24,14 @@
              width="100%" playsinline autoplay loop muted
              style="border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.12);"></video>
       <p style="margin:8px 0 0 0; font-size:0.88rem; font-weight:600; color:#333;">
-        Policy execution after AMP training (Isaac Sim)
+        AMP-trained policy execution (Isaac Sim)
       </p>
     </div>
   </div>
 
   <p style="margin:0 0 22px 0; font-size:0.92rem; color:#555; line-height:1.75;">
-    This is my first step into AMP — a demo-level experiment to get familiar with the framework.
-    I will keep learning and exploring this direction.
+    This initial experiment gave me hands-on experience with the AMP training pipeline and motion-prior formulation in practice.
+    It also strengthened my interest in using learned motion priors to improve the naturalness of robot locomotion.
   </p>
 
   <!-- Related Papers -->

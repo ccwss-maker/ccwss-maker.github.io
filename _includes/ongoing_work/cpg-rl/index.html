@@ -10,7 +10,7 @@
     </p>
     <p style="margin:0;">
       <strong>② The question that interested me.</strong>
-      In CPG-RL, the oscillator itself has a stable limit-cycle structure, but it is less clear how much of the final robot-level robustness comes from this oscillator property,
+      In CPG-RL [<a href="#cpg-rl-paper" style="text-decoration:none;">1</a>], the oscillator itself has a stable limit-cycle structure, but it is less clear how much of the final robot-level robustness comes from this oscillator property,
       and how much comes from the downstream mapping, low-level control, and RL optimisation.
       This became the main question behind my reproduction and follow-up experiments.
     </p>
@@ -71,10 +71,9 @@
 
   <p style="margin:0 0 16px 0; font-size:0.92rem; color:#555; line-height:1.75;">
     This mapping turns oscillator states into target foot positions, from which the final gait is generated.
-    It led me to a practical question: in this formulation, is CPG mainly providing <strong>oscillator-level stability</strong>, or is it acting primarily as a <strong>structured periodic prior</strong>
-    whose final effectiveness still depends heavily on the hand-designed mapping to robot motion?
+    This led me to a practical question: in this formulation, does CPG really contribute robot-level stability, or does it mainly serve as a periodic motion prior while the final locomotion quality still depends on the hand-designed mapping and learned policy?
   </p>
-
+  
   <p style="margin:0 0 12px 0; font-size:0.92rem; color:#555; line-height:1.75;">
     To probe this question, I also tested a simpler joint-space baseline in which each joint is parameterised directly by a sinusoidal phase:
   </p>
