@@ -22,7 +22,7 @@ My background is in **optimization-based planning and control** for autonomous s
 
 I am currently transitioning toward **reinforcement learning for robot locomotion**, with ongoing work spanning quadruped locomotion and humanoid control.
 More broadly, I am interested in integrating **structured dynamical priors** into **learning-based control** to achieve **robust, interpretable, and natural robot locomotion**.
-A detailed record of what I am actively learning and building can be found in **[Ongoing Research](#ongoing-rl-locomotion)**.
+Selected ongoing work is listed below under **[Ongoing Research](#ongoing-rl-locomotion)**.
 
 <span class='anchor' id='current-position'></span>
 
@@ -51,21 +51,21 @@ A detailed record of what I am actively learning and building can be found in **
 
 <details style="margin:8px 0;">
   <summary style="cursor:pointer; padding:10px; background:#f0f0f0; border-radius:5px; font-weight:600;">
-    IsaacLab Official Demo — Full Pipeline (Training → Sim-to-Sim → Sim-to-Real)
+    Go2 Locomotion Pipeline in Isaac Lab — Training, Sim-to-Sim, and Sim-to-Real
   </summary>
   {% include ongoing_work/go2_flat/index.html %}
 </details>
 
 <details style="margin:8px 0;">
   <summary style="cursor:pointer; padding:10px; background:#f0f0f0; border-radius:5px; font-weight:600;">
-    CPG-RL Reproduction — Interpretability & Stability via Central Pattern Generators
+    CPG-RL Reproduction — Central Pattern Generators for Interpretable Locomotion
   </summary>
   {% include ongoing_work/cpg-rl/index.html %}
 </details>
 
 <details style="margin:8px 0;">
   <summary style="cursor:pointer; padding:10px; background:#f0f0f0; border-radius:5px; font-weight:600;">
-    AMP — Adversarial Motion Priors for Natural Locomotion
+    AMP Exploration — Motion Priors for Natural Humanoid Skills
   </summary>
   {% include ongoing_work/amp/index.html %}
 </details>
