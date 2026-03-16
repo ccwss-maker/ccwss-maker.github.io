@@ -32,9 +32,6 @@ More broadly, I am interested in integrating **structured dynamical priors** int
 
 <span class='anchor' id='ongoing-rl-locomotion'></span>
 
-<!-- # 🤖 Ongoing Research
-{% include ongoing_work/rl_locomotion/index.html %} -->
-
 # 📖 Education
 - *Aug 2024 – Present*, **Nanyang Technological University**, Singapore  
   *M.Sc. in Computer Control and Automation, School of Electrical and Electronic Engineering*  
@@ -45,10 +42,32 @@ More broadly, I am interested in integrating **structured dynamical priors** int
   *B.Eng. in Vehicle Engineering (Industrial Planning), School of Automobile and Traffic Engineering*  
   GPA: 88.3/100 <!-- (Class Rank: 3/32, Department Rank: 8/157) -->
 
-
 <!-- # 🔥 News
 - *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
 - *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
+
+# 🤖 Ongoing Research
+
+<details style="margin:8px 0;">
+  <summary style="cursor:pointer; padding:10px; background:#f0f0f0; border-radius:5px; font-weight:600;">
+    IsaacLab Official Demo — Full Pipeline (Training → Sim-to-Sim → Sim-to-Real)
+  </summary>
+  {% include ongoing_work/go2_flat/index.html %}
+</details>
+
+<details style="margin:8px 0;">
+  <summary style="cursor:pointer; padding:10px; background:#f0f0f0; border-radius:5px; font-weight:600;">
+    CPG-RL Reproduction — Interpretability & Stability via Central Pattern Generators
+  </summary>
+  {% include ongoing_work/cpg-rl/index.html %}
+</details>
+
+<details style="margin:8px 0;">
+  <summary style="cursor:pointer; padding:10px; background:#f0f0f0; border-radius:5px; font-weight:600;">
+    AMP — Adversarial Motion Priors for Natural Locomotion
+  </summary>
+  {% include ongoing_work/amp/index.html %}
+</details>
 
 # 📝 Publications 
 ## ✅ Accepted & Published

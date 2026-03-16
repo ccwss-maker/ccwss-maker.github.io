@@ -1,0 +1,256 @@
+<div style="border-bottom:1px #efefef solid; padding:2em 0;">
+
+  <!-- Motivation -->
+  <div style="margin-bottom:22px; font-size:0.92rem; color:#555; line-height:1.75;">
+    <p style="margin:0 0 10px 0;">
+      <strong>① Unnatural gait &amp; lack of interpretability.</strong>
+      A pure RL policy (3-layer MLP, N-to-N) outputs raw joint targets with no structural prior —
+      the network is a black box and the resulting gait looks unnatural.
+      With CPG, each leg's motion is parameterised by a <strong>phase φ</strong>:
+      0 at the start of a stride, π at mid-swing, 2π completing one full cycle.
+      The policy only modulates amplitude, frequency, and phase offset,
+      making the gait <strong>physically interpretable at every timestep</strong>.
+    </p>
+    <p style="margin:0;">
+      <strong>② Natural stability.</strong>
+      While an MLP-based policy can also learn disturbance recovery through training,
+      CPG oscillators provide a <strong>built-in stability guarantee by design</strong>:
+      the oscillator converges to a stable limit cycle, so after any perturbation
+      the phase trajectory is automatically pulled back to the target circle,
+      giving the robot an inherent tendency to restore a regular gait.
+    </p>
+  </div>
+
+  <!-- Videos: CPG demo + Training side by side -->
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:22px;">
+
+    <div style="text-align:center;">
+      <video src="images/ongoing_work/cpg-rl/cpg.mp4"
+             width="100%" playsinline autoplay loop muted
+             style="border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.12);"></video>
+      <p style="margin:8px 0 0 0; font-size:0.88rem; font-weight:600; color:#333;">
+        CPG Limit Cycle — phase trajectory converging to the target circle
+      </p>
+    </div>
+
+    <div style="text-align:center;">
+      <video src="images/ongoing_work/cpg-rl/go2_cpgrl_traning_flat_reproduction.mp4"
+             width="100%" playsinline autoplay loop muted
+             style="border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.12);"></video>
+      <p style="margin:8px 0 0 0; font-size:0.88rem; font-weight:600; color:#333;">
+        <a href="https://ieeexplore.ieee.org/abstract/document/9932888/" target="_blank"
+           style="color:#333; text-decoration:underline;">CPG-RL</a> Reproduction Training (Isaac Sim, Go2 flat terrain)
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Reproduction note -->
+  <p style="margin:0 0 16px 0; font-size:0.92rem; color:#555; line-height:1.75;">
+  The original CPG-RL [<a href="#cpg-rl-paper" style="text-decoration:none;">1</a>]
+  is not open-sourced. I reproduced it from scratch in IsaacLab by following the equations and method described in the paper.
+  The training partially recovers the expected behaviour, while the remaining gap is likely caused by undisclosed implementation details.
+  </p>
+
+  <p style="margin:0 0 12px 0; font-size:0.92rem; color:#555; line-height:1.75;">
+    In CPG-RL, the CPG oscillator states are not mapped directly to joint targets. Instead, they are first converted into foot-end trajectories:
+  </p>
+
+  <div style="margin:10px 0 14px 0; font-size:0.92rem; color:#555; line-height:1.8;">
+    \[
+    x_{i,\mathrm{foot}} = -d_{\mathrm{step}}(r_i - 1)\cos(\theta_i)\cos(\phi_i)
+    \]
+    \[
+    y_{i,\mathrm{foot}} = -d_{\mathrm{step}}(r_i - 1)\cos(\theta_i)\sin(\phi_i)
+    \]
+    \[
+    z_{i,\mathrm{foot}} =
+    \begin{cases}
+    -h + g_c \sin(\theta_i), & \text{if } \sin(\theta_i) > 0 \\
+    -h + g_p \sin(\theta_i), & \text{otherwise}
+    \end{cases}
+    \]
+  </div>
+
+  <p style="margin:0 0 16px 0; font-size:0.92rem; color:#555; line-height:1.75;">
+    Here, \(i\) denotes the leg index; \(r_i\), \(\theta_i\), and \(\phi_i\) are the oscillator states of leg \(i\); 
+    \(d_{\mathrm{step}}\) is the step length scale; \(h\) is the standing height; and \(g_c\), \(g_p\) are the swing and stance vertical gains, respectively.
+    This mapping transforms oscillator outputs into foot target positions \((x_{i,\mathrm{foot}}, y_{i,\mathrm{foot}}, z_{i,\mathrm{foot}})\), from which the final gait is generated.
+  </p>
+
+  <p style="margin:0 0 16px 0; font-size:0.92rem; color:#555; line-height:1.75;">
+    This led me to a key question: why not let the phase directly parameterise the joint motion, instead of introducing a hand-designed intermediate mapping?
+    My current view is that CPG, in this formulation, acts primarily as a <strong>structured motion prior</strong>.
+    Its role is to constrain the policy to generate periodic and interpretable patterns, but the final locomotion quality still depends heavily on the manually designed mapping from oscillator states to robot motion.
+    If this template is poorly designed, it can become a bottleneck that limits the expressiveness of the action space.
+    This is likely why the original paper maps the oscillator outputs to Cartesian foot trajectories rather than directly to joint targets.
+  </p>
+
+  <p style="margin:0 0 12px 0; font-size:0.92rem; color:#555; line-height:1.75;">
+    To test this idea, I first considered a simpler formulation where each leg shares one main phase:
+  </p>
+
+  <div style="margin:10px 0 14px 0; font-size:0.92rem; color:#555; line-height:1.8;">
+    \[
+    q_{ij}(t) = b_{ij} + a_{ij}\sin\big(\psi_i(t)+\delta_{ij}\big)
+    \]
+  </div>
+
+  <p style="margin:0 0 16px 0; font-size:0.92rem; color:#555; line-height:1.75;">
+    Here, \(q_{ij}(t)\) is the target angle of joint \(j\) on leg \(i\); \(b_{ij}\) is the joint bias, chosen from the standing posture; 
+    \(a_{ij}\) is the joint amplitude; \(\delta_{ij}\) is a fixed phase offset within the leg; and \(\psi_i(t)\) is the main phase of leg \(i\), modulated by RL.
+  </p>
+
+  <p style="margin:0 0 12px 0; font-size:0.92rem; color:#555; line-height:1.75;">
+    Before that, an even simpler baseline can be defined by assigning an independent phase to every joint:
+  </p>
+
+  <div style="margin:10px 0 14px 0; font-size:0.92rem; color:#555; line-height:1.8;">
+    \[
+    q_{ij}(t) = b_{ij} + a_{ij}\sin\big(\psi_{ij}(t)\big)
+    \]
+  </div>
+
+  <p style="margin:0 0 16px 0; font-size:0.92rem; color:#555; line-height:1.75;">
+    In this case, \(q_{ij}(t)\), \(b_{ij}\), and \(a_{ij}\) keep the same meanings as above, while \(\psi_{ij}(t)\) denotes the RL-controlled phase of joint \(j\) on leg \(i\).
+    This formulation removes most of the structural coupling across joints, and I hypothesise that, despite the sinusoidal form, it has essentially the same expressive bottleneck as direct joint-target control.
+  </p>
+
+  <p style="margin:0 0 16px 0; font-size:0.92rem; color:#555; line-height:1.75;">
+  In my preliminary experiments, this baseline was already sufficient to make the robot run on flat terrain, providing an initial indication that phase-based control alone is feasible.
+  To probe its behaviour, I varied the joint amplitude ratio \(a_{ij}\) from 20% to 100% of the joint range limit.
+  The results showed a clear trend: with small amplitudes (e.g. 20%), the robot quickly failed after only a few steps, while larger amplitudes led to progressively more stable and effective locomotion.
+  The best result was obtained at 100%, where the tracking metrics <code>error_velocity_xy</code> and <code>error_angular_velocity_z</code> became very close to those of direct joint-target control.
+  </p>
+
+  <!-- 20% vs 100% amplitude videos -->
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:22px;">
+    <div style="text-align:center;">
+      <video src="images/ongoing_work/cpg-rl/0.2.mp4"
+             width="100%" playsinline autoplay loop muted
+             style="border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.12);"></video>
+      <p style="margin:8px 0 0 0; font-size:0.88rem; font-weight:600; color:#333;">Amplitude 20% — fails after a few steps</p>
+    </div>
+    <div style="text-align:center;">
+      <video src="images/ongoing_work/cpg-rl/1.0.mp4"
+             width="100%" playsinline autoplay loop muted
+             style="border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.12);"></video>
+      <p style="margin:8px 0 0 0; font-size:0.88rem; font-weight:600; color:#333;">Amplitude 100% — stable locomotion</p>
+    </div>
+  </div>
+
+  <p style="margin:0 0 16px 0; font-size:0.92rem; color:#555; line-height:1.75;">
+    Based on my reproduction attempts, preliminary experiments, and reading of the literature, I currently suspect that many existing CPG+RL methods do not truly exploit the core dynamical property of CPGs — namely, the convergence of the oscillator state back to a stable limit cycle after perturbation.
+    Instead, they often use CPG mainly as a structured periodic parametrisation, while the actual robust locomotion behaviour is still learned by RL through the mapping and policy optimisation.
+    In that sense, the observed disturbance recovery cannot be cleanly attributed to CPG stability itself.
+  </p>
+
+  <p style="margin:0 0 16px 0; font-size:0.92rem; color:#555; line-height:1.75;">
+    What I am really interested in is a stronger formulation in which each leg's motion is genuinely parameterised by phase:
+    \(0\) at the beginning of a stride, \(\pi\) at mid-swing, and \(2\pi\) after one full cycle.
+    Under such a representation, if the motion deviates from the desired cycle due to disturbance, the oscillator dynamics should naturally pull it back toward the nominal orbit.
+    This would make the phase not only interpretable, but also dynamically meaningful.
+    In contrast, if one has to infer phase back from the disturbed motion and then correct it through an additional feedback controller,
+    the role of CPG becomes much less distinct and starts to resemble conventional feedback tracking rather than genuine limit-cycle stabilisation.
+  </p>
+
+  <p style="margin:0; font-size:0.92rem; color:#555; line-height:1.75;">
+    My reproduction code, study notes, and multi-run experiment analysis are as follows:
+  </p>
+
+  <!-- Links -->
+  <div style="display:flex; gap:16px; flex-wrap:wrap; margin-bottom:22px;">
+    <a href="https://github.com/ccwss-maker/cpg-rl-reproduction"
+       target="_blank"
+       style="display:inline-flex; align-items:center; gap:8px;
+              padding:8px 20px; background:#24292e; color:white;
+              text-decoration:none; border-radius:6px; font-size:0.9rem; font-weight:600;">
+      <i class="fab fa-github"></i> Reproduction Repo
+    </a>
+    <a href="https://www.yuque.com/ccwss-qia40/fky3uk/ab30kqlaynkmn0ek"
+       target="_blank"
+       style="display:inline-flex; align-items:center; gap:8px;
+              padding:8px 20px; background:#1677ff; color:white;
+              text-decoration:none; border-radius:6px; font-size:0.9rem; font-weight:600;">
+      <i class="fas fa-book"></i> Study Notes (IsaacLab Code Structure)
+    </a>
+    <a href="https://www.yuque.com/ccwss-qia40/fky3uk/ab30kqlaynkm123123"
+       target="_blank"
+       style="display:inline-flex; align-items:center; gap:8px;
+              padding:8px 20px; background:#52c41a; color:white;
+              text-decoration:none; border-radius:6px; font-size:0.9rem; font-weight:600;">
+      <i class="fas fa-flask"></i> Experiment Records
+    </a>
+  </div>
+
+  <!-- Related Papers -->
+  <div style="margin-bottom:20px;">
+    <p style="margin:0 0 12px 0; font-size:0.95rem; font-weight:700; color:#222;">References</p>
+
+    <div id="cpg-rl-paper" style="background:#fafafa; border:1px solid #e2e8f0; border-radius:8px;
+                padding:14px 16px; margin-bottom:12px;">
+      <p style="margin:0 0 4px 0; font-size:0.93rem; font-weight:700; color:#222;">
+        [1] CPG-RL: Learning Central Pattern Generators for Quadruped Locomotion
+      </p>
+      <p style="margin:0 0 6px 0; font-size:0.87rem; color:#666; font-style:italic;">
+        Bellegarda, Guillaume &amp; Ijspeert, Auke ·
+        <em>IEEE Robotics and Automation Letters</em>, 2022, Vol. 7(4), pp. 12547–12554
+      </p>
+      <a href="https://ieeexplore.ieee.org/abstract/document/9932888/"
+         target="_blank"
+         style="font-size:0.87rem; color:#2b6cb0; text-decoration:underline;">
+        DOI: 10.1109/LRA.2022.3218167
+      </a>
+    </div>
+
+    <div style="background:#fafafa; border:1px solid #e2e8f0; border-radius:8px;
+                padding:14px 16px; margin-bottom:12px;">
+      <p style="margin:0 0 4px 0; font-size:0.93rem; font-weight:700; color:#222;">
+        [2] AI-CPG: Adaptive Imitated Central Pattern Generators for Bipedal Locomotion Learned Through Reinforced Reflex Neural Networks
+      </p>
+      <p style="margin:0 0 6px 0; font-size:0.87rem; color:#666; font-style:italic;">
+        Li, Guanda; Ijspeert, Auke &amp; Hayashibe, Mitsuhiro ·
+        <em>IEEE Robotics and Automation Letters</em>, 2024, Vol. 9(6), pp. 5190–5197
+      </p>
+      <a href="https://ieeexplore.ieee.org/abstract/document/10499824"
+         target="_blank"
+         style="font-size:0.87rem; color:#2b6cb0; text-decoration:underline;">
+        DOI: 10.1109/LRA.2024.3388842
+      </a>
+    </div>
+
+    <div style="background:#fafafa; border:1px solid #e2e8f0; border-radius:8px;
+                padding:14px 16px; margin-bottom:12px;">
+      <p style="margin:0 0 4px 0; font-size:0.93rem; font-weight:700; color:#222;">
+        [3] Central Pattern Generators for Locomotion Control in Animals and Robots: A Review
+      </p>
+      <p style="margin:0 0 6px 0; font-size:0.87rem; color:#666; font-style:italic;">
+        Ijspeert, Auke Jan ·
+        <em>Neural Networks</em>, 2008, Vol. 21(4), pp. 642–653
+      </p>
+      <a href="https://doi.org/10.1016/j.neunet.2008.03.014"
+         target="_blank"
+         style="font-size:0.87rem; color:#2b6cb0; text-decoration:underline;">
+        DOI: 10.1016/j.neunet.2008.03.014
+      </a>
+    </div>
+
+    <div style="background:#fafafa; border:1px solid #e2e8f0; border-radius:8px;
+                padding:14px 16px;">
+      <p style="margin:0 0 4px 0; font-size:0.93rem; font-weight:700; color:#222;">
+        [4] Programmable Central Pattern Generators: An Application to Biped Locomotion Control
+      </p>
+      <p style="margin:0 0 6px 0; font-size:0.87rem; color:#666; font-style:italic;">
+        Righetti, L. &amp; Ijspeert, Auke Jan ·
+        <em>IEEE ICRA</em>, 2006, pp. 1585–1590
+      </p>
+      <a href="https://doi.org/10.1109/ROBOT.2006.1641933"
+         target="_blank"
+         style="font-size:0.87rem; color:#2b6cb0; text-decoration:underline;">
+        DOI: 10.1109/ROBOT.2006.1641933
+      </a>
+    </div>
+  </div>
+
+
+</div>
