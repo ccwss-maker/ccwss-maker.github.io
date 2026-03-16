@@ -22,6 +22,7 @@ My background is in **optimization-based planning and control** for autonomous s
 
 I am currently transitioning toward **reinforcement learning for robot locomotion**, with ongoing work spanning quadruped locomotion and humanoid control.
 More broadly, I am interested in integrating **structured dynamical priors** into **learning-based control** to achieve **robust, interpretable, and natural robot locomotion**.
+A detailed record of what I am actively learning and building can be found in **[Ongoing Research](#ongoing-rl-locomotion)**.
 
 <span class='anchor' id='current-position'></span>
 
