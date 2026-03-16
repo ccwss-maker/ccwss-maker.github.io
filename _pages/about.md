@@ -34,7 +34,7 @@ A detailed record of what I am actively learning and building can be found in **
 <span class='anchor' id='ongoing-rl-locomotion'></span>
 
 # 📖 Education
-- *Aug 2024 – Present*, **Nanyang Technological University**, Singapore  
+- *Aug 2024 – Jan 2026*, **Nanyang Technological University**, Singapore  
   *M.Sc. in Computer Control and Automation, School of Electrical and Electronic Engineering*  
   Dissertation: *Minimizing Swept Area for AGVs in Singapore Seaport*  
   GPA: 95/100  
