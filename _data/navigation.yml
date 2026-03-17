@@ -12,7 +12,7 @@ main:
   # - title: "News"
   #   url: "/#-news"
 
-  - title: "Ongoing Research"
+  - title: "Ongoing Explorations"
     url: "/#ongoing-rl-locomotion"
 
   - title: "Publications"

@@ -22,7 +22,7 @@ My background is in **optimization-based planning and control** for autonomous s
 
 I am currently transitioning toward **reinforcement learning for robot locomotion**, with ongoing work spanning quadruped locomotion and humanoid control.
 More broadly, I am interested in integrating **structured dynamical priors** into **learning-based control** to achieve **robust, interpretable, and natural robot locomotion**.
-Selected ongoing work is listed below under **[Ongoing Research](#ongoing-rl-locomotion)**.
+Selected ongoing work is listed below under **[Ongoing Explorations](#ongoing-rl-locomotion)**.
 
 <span class='anchor' id='current-position'></span>
 
@@ -47,8 +47,7 @@ Selected ongoing work is listed below under **[Ongoing Research](#ongoing-rl-loc
 - *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
 - *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
 
-# 🤖 Ongoing Research
-
+# 🤖 Ongoing Explorations
 <details style="margin:8px 0;">
   <summary style="cursor:pointer; padding:10px; background:#f0f0f0; border-radius:5px; font-weight:600;">
     Go2 Locomotion Pipeline in Isaac Lab — Training, Sim-to-Sim, and Sim-to-Real
