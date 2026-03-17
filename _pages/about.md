@@ -17,7 +17,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am Tianxin Hu, recently graduated with an **M.Sc. in Computer Control and Automation** from **Nanyang Technological University (NTU), Singapore**, under the supervision of **[Prof. Lihua Xie](https://scholar.google.com/citations?user=Fmrv3J8AAAAJ&hl=en)** and Dr. Yuan Shenghai. 
+I am Tianxin Hu, recently graduated with an **M.Sc. in Computer Control and Automation** from **Nanyang Technological University (NTU), Singapore**, under the supervision of **[Prof. Lihua Xie](https://scholar.google.com/citations?user=Fmrv3J8AAAAJ&hl=en)**. 
 My background is in **optimization-based planning and control** for autonomous systems, with practical experience in ROS/ROS2, C++/Python, and simulation-driven validation. 
 
 I am currently transitioning toward **reinforcement learning for robot locomotion**, with ongoing work spanning quadruped locomotion and humanoid control.
@@ -36,7 +36,7 @@ Selected ongoing work is listed below under **[Ongoing Research](#ongoing-rl-loc
 # 📖 Education
 - *Aug 2024 – Jan 2026*, **Nanyang Technological University**, Singapore  
   *M.Sc. in Computer Control and Automation, School of Electrical and Electronic Engineering*  
-  Dissertation: *Minimizing Swept Area for AGVs in Singapore Seaport*  
+  <!-- Dissertation: *Minimizing Swept Area for AGVs in Singapore Seaport*   -->
   GPA: 95/100  
 
 - *Sep 2020 – Jun 2024*, **Wuhan University of Science and Technology**, China  
