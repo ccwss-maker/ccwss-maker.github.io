@@ -27,11 +27,9 @@ Selected ongoing work is listed below under **[Ongoing Explorations](#ongoing-rl
 <span class='anchor' id='current-position'></span>
 
 # 💼 Current Position
-- *Mar 2026 – Present*, **Nanyang Technological University (NTU), Singapore**  
+- *Jun 2026 – Present*, **Nanyang Technological University (NTU), Singapore**  
   *Research Assistant, Prof. Lihua Xie’s Group*  
   Working on a humanoid robotics project with Chery Robotics, focusing on reinforcement learning for humanoid locomotion in embodied task execution scenarios.
-
-<span class='anchor' id='ongoing-rl-locomotion'></span>
 
 # 📖 Education
 - *Aug 2024 – Jan 2026*, **Nanyang Technological University**, Singapore  
@@ -47,35 +45,25 @@ Selected ongoing work is listed below under **[Ongoing Explorations](#ongoing-rl
 - *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
 - *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
 
-# 🤖 Ongoing Explorations
-<details style="margin:8px 0;">
-  <summary style="cursor:pointer; padding:10px; background:#f0f0f0; border-radius:5px; font-weight:600;">
-    Go2 Locomotion Pipeline in Isaac Lab — Training, Sim-to-Sim, and Sim-to-Real
-  </summary>
-  {% include ongoing_work/go2_flat/index.html %}
-</details>
-
-<details style="margin:8px 0;">
-  <summary style="cursor:pointer; padding:10px; background:#f0f0f0; border-radius:5px; font-weight:600;">
-    CPG-RL Reproduction — Central Pattern Generators for Interpretable Locomotion
-  </summary>
-  {% include ongoing_work/cpg-rl/index.html %}
-</details>
-
-<details style="margin:8px 0;">
-  <summary style="cursor:pointer; padding:10px; background:#f0f0f0; border-radius:5px; font-weight:600;">
-    AMP Exploration — Motion Priors for Natural Humanoid Skills
-  </summary>
-  {% include ongoing_work/amp/index.html %}
-</details>
-
 # 📝 Publications 
 ## ✅ Accepted & Published
+{% include publications/offworld_iros2026/index.html %}
 {% include publications/svplan_icra2025/index.html %}
 {% include publications/msagv_jai2025/index.html %}
 {% include publications/tgsformer_cvpr2026/index.html %}
 
-<!-- ## 🔬 Under Review -->
+## 🔬 Under Review
+{% include publications/objecttracking_underreview/index.html %}
+
+<span class='anchor' id='ongoing-rl-locomotion'></span>
+
+# 🤖 Ongoing Explorations
+<details open style="margin:8px 0;">
+  <summary style="cursor:pointer; padding:10px; background:#f0f0f0; border-radius:5px; font-weight:600;">
+    Go2 Extreme Parkour Extension — Faster Training and More Stable, Natural Locomotion
+  </summary>
+  {% include ongoing_work/go2_parkour/index.html %}
+</details>
 
 # 📜 Patents
 {% include patents/index.html %}

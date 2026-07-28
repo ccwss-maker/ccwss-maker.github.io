@@ -12,11 +12,11 @@ main:
   # - title: "News"
   #   url: "/#-news"
 
-  - title: "Ongoing Explorations"
-    url: "/#ongoing-rl-locomotion"
-
   - title: "Publications"
     url: "/#-publications"
+
+  - title: "Ongoing Explorations"
+    url: "/#ongoing-rl-locomotion"
 
   - title: "Patents"
     url: "/#-patents"

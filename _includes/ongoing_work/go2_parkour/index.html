@@ -1,0 +1,92 @@
+<div style="border-bottom:1px #efefef solid; padding:1em 0;">
+
+  <!-- Description -->
+  <p style="margin:0 0 18px 0; font-size:0.92rem; color:#555; line-height:1.7;">
+    Building on <strong>Extreme Parkour</strong>
+    [<a href="#extreme-parkour-paper" style="text-decoration:none;">1</a>],
+    I extended the locomotion training pipeline for the Unitree Go2 with a focus on
+    <strong>stability</strong>, <strong>training efficiency</strong>, and more
+    <strong>natural gait behaviour</strong>.
+  </p>
+
+  <!-- Improvements -->
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));
+              gap:14px; margin-bottom:22px;">
+    <div style="background:#fafafa; border:1px solid #e2e8f0; border-radius:8px; padding:14px 16px;">
+      <p style="margin:0 0 6px 0; font-size:0.9rem; font-weight:700; color:#2b6cb0;">
+        ① More robust adaptation
+      </p>
+      <p style="margin:0; font-size:0.88rem; color:#555; line-height:1.65;">
+        Expanded the RMA latent representation to retain richer terrain and dynamics context,
+        improving policy stability during challenging parkour manoeuvres.
+      </p>
+    </div>
+
+    <div style="background:#fafafa; border:1px solid #e2e8f0; border-radius:8px; padding:14px 16px;">
+      <p style="margin:0 0 6px 0; font-size:0.9rem; font-weight:700; color:#2b6cb0;">
+        ② 3.5× faster training
+      </p>
+      <p style="margin:0; font-size:0.88rem; color:#555; line-height:1.65;">
+        Replaced complex mesh-based training terrain with lightweight box primitives,
+        increasing training throughput by approximately <strong>3.5×</strong>.
+      </p>
+    </div>
+  </div>
+
+  <!-- Simulation and real-world videos -->
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+              gap:20px; margin-bottom:22px;">
+    <div style="text-align:center;">
+      <video src="images/ongoing_work/go2_parkour/isaacsim.mp4"
+             width="90%" playsinline autoplay loop muted
+             style="border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.12);"></video>
+      <p style="margin:8px 0 0 0; font-size:0.88rem; font-weight:600; color:#333;">
+        Parkour policy evaluation in Isaac Sim
+      </p>
+    </div>
+
+    <div style="text-align:center;">
+      <video src="images/ongoing_work/go2_parkour/sim2real.mp4"
+             width="90%" playsinline autoplay loop muted
+             style="border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.12);"></video>
+      <p style="margin:8px 0 0 0; font-size:0.88rem; font-weight:600; color:#333;">
+        Sim-to-real deployment on the Unitree Go2
+      </p>
+    </div>
+  </div>
+
+  <p style="margin:0 0 22px 0; font-size:0.92rem; color:#555; line-height:1.75;">
+    Together, these changes make the training pipeline substantially more efficient while
+    improving the stability and motion quality of the resulting parkour policy in both
+    simulation and real-world deployment.
+  </p>
+
+  <!-- Related paper -->
+  <div>
+    <p style="margin:0 0 12px 0; font-size:0.95rem; font-weight:700; color:#222;">Reference</p>
+
+    <div id="extreme-parkour-paper"
+         style="background:#fafafa; border:1px solid #e2e8f0; border-radius:8px; padding:14px 16px;">
+      <p style="margin:0 0 4px 0; font-size:0.93rem; font-weight:700; color:#222;">
+        [1] Extreme Parkour with Legged Robots
+      </p>
+      <p style="margin:0 0 6px 0; font-size:0.87rem; color:#666; font-style:italic;">
+        Xuxin Cheng, Kexin Shi, Ananye Agarwal &amp; Deepak Pathak ·
+        <em>IEEE International Conference on Robotics and Automation (ICRA)</em>, 2024
+      </p>
+      <div style="display:flex; gap:14px; flex-wrap:wrap;">
+        <a href="https://arxiv.org/abs/2309.14341"
+           target="_blank"
+           style="font-size:0.87rem; color:#2b6cb0; text-decoration:underline;">
+          arXiv:2309.14341
+        </a>
+        <a href="https://extreme-parkour.github.io/"
+           target="_blank"
+           style="font-size:0.87rem; color:#2b6cb0; text-decoration:underline;">
+          Project Page
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>
