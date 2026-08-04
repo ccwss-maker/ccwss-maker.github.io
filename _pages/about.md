@@ -48,6 +48,7 @@ Selected ongoing work is listed below under **[Ongoing Explorations](#ongoing-rl
 # 📝 Publications 
 ## ✅ Accepted & Published
 {% include publications/offworld_iros2026/index.html %}
+{% include publications/lunarplan_icca2026/index.html %}
 {% include publications/svplan_icra2025/index.html %}
 {% include publications/msagv_jai2025/index.html %}
 {% include publications/tgsformer_cvpr2026/index.html %}
@@ -79,12 +80,18 @@ Selected ongoing work is listed below under **[Ongoing Explorations](#ongoing-rl
 # 🎖 Honors and Awards
 {% include awards/index.html %}
 
+{% comment %}
 # 🗺️ Visitor Map
 <details style="margin:20px 0;">
   <summary style="cursor:pointer; padding:10px; background:#f0f0f0; border-radius:5px; font-weight:600;">
     Click to view visitor map 🌍
   </summary>
   <div style="text-align:center; margin:20px 0;">
-    <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=uXIJLHawEZ_nSeyodbXfyETjWNirKIOUUqv4uREhNmk&cl=ffffff&w=300"></script>
+    <a href="https://s01.flagcounter.com/more/ZrKP" target="_blank" rel="noopener noreferrer">
+      <img src="https://s01.flagcounter.com/map/ZrKP/size_s/txt_000000/border_CCCCCC/pageviews_0/viewers_0/flags_0/"
+           alt="Visitor map by Flag Counter"
+           style="max-width:100%; height:auto; border:0;">
+    </a>
   </div>
 </details>
+{% endcomment %}
