@@ -80,18 +80,13 @@ Selected ongoing work is listed below under **[Ongoing Explorations](#ongoing-rl
 # 🎖 Honors and Awards
 {% include awards/index.html %}
 
-{% comment %}
 # 🗺️ Visitor Map
 <details style="margin:20px 0;">
   <summary style="cursor:pointer; padding:10px; background:#f0f0f0; border-radius:5px; font-weight:600;">
     Click to view visitor map 🌍
   </summary>
   <div style="text-align:center; margin:20px 0;">
-    <a href="https://s01.flagcounter.com/more/ZrKP" target="_blank" rel="noopener noreferrer">
-      <img src="https://s01.flagcounter.com/map/ZrKP/size_s/txt_000000/border_CCCCCC/pageviews_0/viewers_0/flags_0/"
-           alt="Visitor map by Flag Counter"
-           style="max-width:100%; height:auto; border:0;">
-    </a>
+    <script type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?d=uXIJLHawEZ_nSeyodbXfyETjWNirKIOUUqv4uREhNmk&cl=ffffff&w=300"></script>
+    <p><a href="https://mapmyvisitors.com/web/1c0bq" target="_blank" rel="noopener noreferrer">View visitor statistics 🌍</a></p>
   </div>
 </details>
-{% endcomment %}
