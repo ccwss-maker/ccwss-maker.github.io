@@ -48,13 +48,11 @@ Selected ongoing work is listed below under **[Ongoing Explorations](#ongoing-rl
 # 📝 Publications 
 ## ✅ Accepted & Published
 {% include publications/offworld_iros2026/index.html %}
+{% include publications/objecttracking_icarcv2026/index.html %}
 {% include publications/lunarplan_icca2026/index.html %}
 {% include publications/svplan_icra2025/index.html %}
 {% include publications/msagv_jai2025/index.html %}
 {% include publications/tgsformer_cvpr2026/index.html %}
-
-## 🔬 Under Review
-{% include publications/objecttracking_underreview/index.html %}
 
 <span class='anchor' id='ongoing-rl-locomotion'></span>
 
